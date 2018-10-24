@@ -1,35 +1,35 @@
 // setup canvas
 
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-var counter = document.querySelector('p');
+var canvas = document.querySelector('canvas')
+var ctx = canvas.getContext('2d')
+var counter = document.querySelector('p')
 
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
+var width = canvas.width = window.innerWidth
+var height = canvas.height = window.innerHeight
 
 // function to generate random number
 
 function random(min,max) {
-  var num = Math.floor(Math.random()*(max-min)) + min;
-  return num;
+  var num = Math.floor(Math.random()*(max-min)) + min
+  return num
 }
 
 // define Shape constructor
 
 function Shape(x, y, velX, velY, exists) {
-  this.x = x;
-  this.y = y;
-  this.velX = velX;
-  this.velY = velY;
-  this.exists = exists;
+  this.x = x
+  this.y = y
+  this.velX = velX
+  this.velY = velY
+  this.exists = exists
 }
 
 // define Ball constructor
 
 function Ball(x, y, velX, velY, color, size, exists) {
   Shape.call(this, x, y, velX, velY, exists)
-  this.color = color;
-  this.size = size;
+  this.color = color
+  this.size = size
 }
 
 Ball.prototype = Object.create(Shape.prototype)
@@ -43,8 +43,8 @@ Object.defineProperty(Ball.prototype, 'constructor', {
 
 function EvilCircle(x, y, exists) {
   Shape.call(this, x, y, 20, 20, exists)
-  this.color = 'white';
-  this.size = 10;
+  this.color = 'white'
+  this.size = 10
 }
 
 EvilCircle.prototype = Object.create(Shape.prototype)
