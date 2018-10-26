@@ -26,14 +26,15 @@ p, li {
 }
 
 body {
-  width: 1000px;
+  width: 75%;
   margin: 0 auto;
   padding: 0 20px 20px 20px;
 }
 
 img {
-  width: 700px;
+  width: 90%;
   display: block;
+  padding-top: 20px;
   margin: 0 auto;
 }
 
@@ -89,8 +90,6 @@ iframe {
 }
 
 blockquote {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  padding: 0px 20px 10px 20px;
   background-color: rgba(255,255,255,0.5);
 }
